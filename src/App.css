@@ -7,28 +7,10 @@
   grid-template-areas:
   "h h"
   "n c"
-
-}
-
-.header{
-  grid-area: h;
-  background-color: crimson;
-}
-.header img{
-  width:67px;
 }
 
 
-.nav{
-  grid-area: n;
-  background-color: orange ;
 
-}
 
-.content{
-  grid-area: c;
-  background-color: greenyellow;
-}
-.content img{
-  width:1000px ;
-}
+
+
