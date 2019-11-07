@@ -28,5 +28,7 @@
 .content{
   grid-area: c;
   background-color: greenyellow;
-
+}
+.content img{
+  width:1000px ;
 }
