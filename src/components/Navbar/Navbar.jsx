@@ -4,7 +4,7 @@ const NavBar = () => {
     return (
         <nav className={classes.nav}>
             <div className = {`${classes.item} ${classes.active}`}>
-                <a  href='/'>Profile</a>
+                <a   activeClassName={classes.activeLinkEllow} href='/'>Profile</a>
             </div>
             <div className ={classes.item}>
                 <a  href='/'>Messages</a>
