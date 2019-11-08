@@ -1,0 +1,16 @@
+.description{
+    display:flex;
+
+    padding:10px;
+}
+
+.pict img {
+    width:320px;
+    height:195px;
+    border-radius: 25px;
+}
+
+.textProfilePeople{
+    margin: -20px 30px;
+    font-size: 18px;
+}

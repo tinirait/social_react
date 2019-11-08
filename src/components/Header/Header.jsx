@@ -3,7 +3,7 @@ import  classes from'./Header.module.css'
 const Header = () => {
     return (
         <header className={classes.header}>
-            <img src='https://img2.gratispng.com/20171216/258/fox-png-5a35a82f32c449.143206221513465903208.jpg'
+            <img src='https://spng.pngfind.com/pngs/s/325-3251746_avengers-clipart-object-marvel-kawaii-captain-america-hd.png'
                  alt='Fox'/>
         </header>
     );

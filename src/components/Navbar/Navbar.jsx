@@ -15,7 +15,7 @@ const NavBar = () => {
             <div className ={classes.item}>
                 <a  href='/'>Music</a>
             </div>
-            <div className ={classes.item}>
+            <div className ={classes.itemSettings}>
                 <a  href='/'>Settings</a>
             </div>
         </nav>

@@ -3,6 +3,7 @@
     background-color: darkgrey;
     padding: 18px;
     border: 2px solid black;
+    font-size: 25px;
 }
 .item a{
     color:white;
@@ -11,4 +12,10 @@
 
 .item.active a {
     color: greenyellow;
+}
+
+.itemSettings a{
+    color:white;
+    text-decoration: none;
+    margin-top: 30px;
 }
