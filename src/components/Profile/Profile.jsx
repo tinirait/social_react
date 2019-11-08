@@ -6,15 +6,15 @@ import AvaDescr from "./avaDescr/avaDescr";
 
 const Profile = () => {
     return (
-        <div className={classes.content}>
-            <div>
+            <div className={classes.mainImage}>
                 <img
                     src={img}
                     alt="Test"/>
-            </div>
-            <AvaDescr nam = 'Tor' birth = 'Birth:20 january' cityes = 'City:Alva' education = 'Education:Degry' webSite = 'Web Site: it-camasutra.com'/>
+
+            <AvaDescr nam = 'Tor' birth = '20 january' cityes = 'Alva' education = 'Degry' webSite = 'it-camasutra.com'/>
             <MyPosts/>
-        </div>
+            </div>
+
     );
 };
 
