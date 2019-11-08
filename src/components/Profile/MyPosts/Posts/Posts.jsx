@@ -1,14 +1,14 @@
 import React from 'react';
 import classes from './Posts.module.css';
 
-const Posts = () => {
+const Posts = (props) => {
     return (
         <div className = {classes.item}>
-                <img src='http://gamebomb.ru/files/galleries/001/e/e9/307246.jpg'
+                <img src='https://images-na.ssl-images-amazon.com/images/S/sgp-catalog-images/region_US/viacom-Avatar-Sea1-Full-Image_GalleryBackground-en-US-1552014700974._RI_.jpg'
                     alt='ava'/>
-                post 1
+                {props.message}
                 <div>
-                <span>like</span>
+                <span>{props.likescount}</span>
                 </div>
             </div>
     );

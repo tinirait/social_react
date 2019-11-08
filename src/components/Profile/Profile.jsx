@@ -12,7 +12,7 @@ const Profile = () => {
                     src={img}
                     alt="Test"/>
             </div>
-            <AvaDescr/>
+            <AvaDescr nam = 'Tor' birth = 'Birth:20 january' cityes = 'City:Alva' education = 'Education:Degry' webSite = 'Web Site: it-camasutra.com'/>
             <MyPosts/>
         </div>
     );
