@@ -1,13 +1,15 @@
 import React from 'react';
 // import classes from './Profile.module.css'
 import MyPosts from "./MyPosts/MyPosts";
-import AvaDescr from "./avaDescr/avaDescr";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => {
+
+
+const Profile = (props) => {
     return (
         <div>
-            <AvaDescr nam='Tor' birth='20 january' cityes='Alva' education='Degry' webSite='it-camasutra.com'/>
-            <MyPosts/>
+            <ProfileInfo nam='Tor' birth='20 january' cityes='Alva' education='Degry' webSite='it-camasutra.com'/>
+            <MyPosts postData = {props.postData}/>
         </div>
 
     );

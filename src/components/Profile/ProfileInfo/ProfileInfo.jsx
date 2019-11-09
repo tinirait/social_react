@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './avaDescr.module.css'
+import classes from './ProfileInfo.module.css'
 import img from "../img/it_camasutra.png";
 
-const AvaDescr = (props) => {
+const ProfileInfo = (props) => {
 
     return (
         <div className={classes.mainImage}>
@@ -20,4 +20,4 @@ const AvaDescr = (props) => {
         </div>
     );
 };
-export default AvaDescr;
+export default ProfileInfo;
