@@ -6,23 +6,21 @@
 
 .dialogsItems {
     padding: 10px;
-    margin: 0 auto; ;
+    margin: 0 auto;;
 
 }
 
-.itemsName{
+.itemsName {
 
 }
 
-.dialogsItems .active{
+.dialogsItems .active {
 
     color: gold;
 }
 
 .messages {
     padding: 10px;
-
-
 }
 
 .itemsMessage {
