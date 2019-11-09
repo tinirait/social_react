@@ -1,0 +1,17 @@
+.friendsMain{
+    display: grid;
+    color: white;
+    grid-template-columns: 36px 76px 47px;
+    grid-template-rows: auto;
+    justify-items: center;
+
+}
+.friendsMain img {
+    width:45px;
+    height:40px;
+    border-radius: 30px;
+}
+
+.mainH{
+margin-top: 90px;
+}
