@@ -24,12 +24,12 @@ let state = {
     },
     sidebar: {
         friendsName: [
-            {id:1, name: 'Vlad'},
-            {id:2, name: 'Petya'},
-            {id:3, name: 'Alex'},
-            {id:1, name: 'Dimuch'},
-            {id:2, name: 'Andrey'},
-            {id:3, name: 'Riki'},
+            {id: 1, name: 'Vlad'},
+            {id: 2, name: 'Petya'},
+            {id: 3, name: 'Alex'},
+            {id: 4, name: 'Dimuch'},
+            {id: 5, name: 'Andrey'},
+            {id: 6, name: 'Riki'},
         ],
     }
 };

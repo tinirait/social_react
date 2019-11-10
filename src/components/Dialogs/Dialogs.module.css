@@ -1,7 +1,8 @@
 .dialogs {
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 2fr 5fr 5fr;
     font-size: 20px;
+
 }
 
 
@@ -12,23 +13,41 @@
     text-decoration: none;
     color: white;
 }
+
+.dialogsItems a.activeLink{
+    color: greenyellow;
+}
+
 .dialogsItems ul{
     color: white;
 }
 
-.itemsName {
-
-}
-
-.dialogsItems .active {
-
-    color: gold;
+.itemsName{
+padding: 2px;
 }
 
 .messages {
     padding: 10px;
+    border: 1px solid black;
+}
+
+.messages img{
+    width:50px;
+    height:50px;
+    border-radius: 30px;
 }
 
 .itemsMessage {
 color: white;
+}
+
+.avatar img{
+    width:50px;
+    height:50px;
+    border-radius: 30px;
+}
+.avatar{
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+    grid-column-gap: 10px;
 }

@@ -7,7 +7,7 @@ import MessageItem from "./Message/Message";
 const Dialogs = (props) => {
 
     let dialogs = props.state.dialogsData.map((newDialogs) => {
-        return <li><DialogItem name={newDialogs.name} id={newDialogs.id}/></li>
+        return <DialogItem name={newDialogs.name} id={newDialogs.id}/>
     });
 
     let messages = props.state.messageData.map((newMessage) => {
@@ -18,14 +18,18 @@ const Dialogs = (props) => {
         <div className={classes.dialogs}>
             <div className={classes.dialogsItems}>
                 <h3>DIALOGS</h3>
-                <ul>
                     {dialogs}
-                </ul>
             </div>
             <div className={classes.messages}>
-                <h3>MESSAGES</h3>
+                <h3>MESSAGES FROM 1 FRIEND</h3>
                 {messages}
             </div>
+
+            <div className={classes.messages}>
+                <h3>MESSAGES FROM 2 FRIEND</h3>
+                {messages}
+            </div>
+
         </div>
 
     );
