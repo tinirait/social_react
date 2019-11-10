@@ -5,12 +5,12 @@ import classes from "./MyPosts.module.css";
 const MyPosts = (props) => {
 
 
-
     let newPostElement = React.createRef();
 
     let addPost = () => {
         let text = newPostElement.current.value;
         props.addPost(text);
+        newPostElement.current.value = '';
     };
 
 
@@ -24,7 +24,7 @@ const MyPosts = (props) => {
             <div className={classes.textAreaMessage}>
 
 
-                <textarea ref = {newPostElement} placeholder='What did you say?'/></div>
+                <textarea ref={newPostElement} placeholder='What did you say?'/></div>
 
 
             <div className={classes.buttonPosition}>
