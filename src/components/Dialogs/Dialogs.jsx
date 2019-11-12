@@ -2,23 +2,30 @@ import React from 'react';
 import classes from './Dialogs.module.css'
 import DialogItem from "./DialogItem/DialogItem";
 import MessageItem from "./Message/Message";
+import {sendMessageCreator, updateNewMessageBodyCreator} from "../../redux/state";
 
 
 const Dialogs = (props) => {
 
-    let newPostElement = React.createRef();
 
-    let addPost = () => {
-        let text = newPostElement.current.value;
-        alert(text);
+    let state = props.store.getState().dialogsPage;
+
+    let onSendMessageClick = () => {
+        props.store.dispatch(sendMessageCreator());
+    };
+
+    let onNewMessageChange = (e) =>{
+        let body = e.target.value;
+        props.store.dispatch(updateNewMessageBodyCreator(body));
+
     };
 
 
-    let dialogs = props.state.dialogsData.map((newDialogs) => {
+    let dialogs = state.dialogsData.map((newDialogs) => {
         return <DialogItem name={newDialogs.name} id={newDialogs.id}/>
     });
 
-    let messages = props.state.messageData.map((newMessage) => {
+    let messages = state.messageData.map((newMessage) => {
         return <MessageItem message={newMessage.messsage} id={newMessage.id}/>
     });
     return (
@@ -29,13 +36,13 @@ const Dialogs = (props) => {
             </div>
             <div className={classes.messages}>
                 <h3>MESSAGES FROM 1 FRIEND</h3>
-                {messages}
+                <div>{messages}</div>
                 <div className={classes.textAreaMessage}>
-                    <textarea ref={newPostElement} placeholder='What did you say?'/>
+                    <textarea onChange={onNewMessageChange}  placeholder='What did you say?' value={state.newMessageBody}/>
                 </div>
                 <div className={classes.buttonPosition}>
                     <div>
-                        <button onClick={addPost} className={classes.buttom}>Add Post</button>
+                        <button onClick={onSendMessageClick} className={classes.buttom}>Add Post</button>
                     </div>
                     <div>
                         <button className={classes.buttom}>Remove Post</button>

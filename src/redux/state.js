@@ -1,6 +1,8 @@
 const ADD_POST = 'ADD-POST';
-
-const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT'
+const UPDATE_NEW_POST_TEXT = 'UPDATE-NEW-POST-TEXT';
+const ADD_TEXT_DIALOGS = 'ADD-POST-DIALOGS';
+const UPDATE_NEW_MESSAGE_BODY = 'UPDATE-NEW-MESSAGE-BODY';
+const SEND_MESSAGE = 'SEND_MESSAGE';
 
 let store = {
     _state: {
@@ -26,6 +28,7 @@ let store = {
                 {id: 2, messsage: 'Why Test'},
                 {id: 3, messsage: 'Do Test'},
             ],
+            newMessageBody: 'it-camasutra.com',
         },
         sidebar: {
             friendsName: [
@@ -62,18 +65,43 @@ let store = {
             this._callSubscriber(this._state);
         }
 
+        if (action.type === SEND_MESSAGE) {
+            let body = this._state.dialogsPage.newMessageBody;
+            this._state.dialogsPage.newMessageBody = '';
+
+            this._state.dialogsPage.messageData.push(
+                {id: 6, messsage: body});
+            this._callSubscriber(this._state);
+
+        }
+
+         else if (action.type === UPDATE_NEW_MESSAGE_BODY) {
+            this._state.dialogsPage.newMessageBody = action.body;
+            this._callSubscriber(this._state);
+        }
+
     }
 };
 
+
+//PrifilePage
 export const addPostActionCreator = () => {
-    return {
-        type: ADD_POST
-    }
+    return {type: ADD_POST}
 };
 export const updateNewPostTextActionCreator = (text) => {
     return {type: UPDATE_NEW_POST_TEXT, newText: text}
 
 };
+
+
+//DialogsPage
+export const sendMessageCreator = () => {
+    return ({type: SEND_MESSAGE});
+};
+export const updateNewMessageBodyCreator = (text) => {
+    return ({type: UPDATE_NEW_MESSAGE_BODY, body: text});
+};
+
 
 export default store;
 window.store = store;

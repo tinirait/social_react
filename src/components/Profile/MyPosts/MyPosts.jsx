@@ -6,6 +6,9 @@ import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../red
 
 const MyPosts = (props) => {
 
+    let posts = props.postData.map((newPost) => {
+        return <Posts message={newPost.message} id={newPost.id} likescount={newPost.likescount}/>
+    });
 
     let newPostElement = React.createRef();
 
@@ -13,25 +16,19 @@ const MyPosts = (props) => {
         props.dispatch(addPostActionCreator());
     };
 
-    let onPostChange = () =>{
+    let onPostChange = () => {
         let text = newPostElement.current.value;
-        // let action = {type:'UPDATE-NEW-POST-TEXT' , newText: text};
         let action = updateNewPostTextActionCreator(text);
         props.dispatch(action);
     };
-
-
-    let posts = props.postData.map((newPost) => {
-        return <Posts message={newPost.message} id={newPost.id} likescount={newPost.likescount}/>
-    });
 
     return (
         <div className={classes.myPostsBlock}>
             <h1>My posts</h1>
             <div className={classes.textAreaMessage}>
 
-
-                <textarea  onChange={onPostChange} ref={newPostElement} placeholder='What did you say?' value={props.newPostText} /></div>
+                <textarea onChange={onPostChange} ref={newPostElement} placeholder='What did you say?'
+                          value={props.newPostText}/></div>
 
             <div className={classes.buttonPosition}>
                 <div>
